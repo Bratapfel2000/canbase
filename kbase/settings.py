@@ -44,9 +44,16 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'rest_framework',
     'django.contrib.staticfiles',
     'storages'
 ]
+
+REST_FRAMEWORK = {
+'DEFAULT_PERMISSION_CLASSES': [
+'rest_framework.permissions.AllowAny',
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

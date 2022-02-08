@@ -16,6 +16,6 @@ urlpatterns = [
     path('contact/', views.contact, name='blog-contact'),
     path('sitemap/', views.sitemap, name='blog-sitemap'),
 
-    path('<int:pk>/', RestPostDetail.as_view()),
-    path('', RestPostList.as_view()),
+    path('<int:pk>/', RestPostDetail.as_view(), name='rest2'),
+    path('', RestPostList.as_view(), name='rest3'),
 ]

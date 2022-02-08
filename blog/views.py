@@ -102,10 +102,10 @@ def sitemap(request):
 
 # Serializer for REST Framework
 class RestPostList(generics.ListCreateAPIView):
-    queryset = Post.objects.all()
+    queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
 
 class RestPostDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Post.objects.all()
+    queryset = Comment.objects.all()
     serializer_class = CommentSerializer

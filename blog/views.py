@@ -13,7 +13,7 @@ from .forms import CommentForm
 from django.urls import reverse_lazy
 
 from rest_framework import generics
-from .serializers import CommentSerializer
+from .serializers import PostSerializer
 
 
 def home(request):
@@ -102,10 +102,10 @@ def sitemap(request):
 
 # Serializer for REST Framework
 class RestPostList(generics.ListCreateAPIView):
-    queryset = Comment.objects.all()
+    queryset = Post.objects.all()
     serializer_class = CommentSerializer
 
 
 class RestPostDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Comment.objects.all()
+    queryset = Post.objects.all()
     serializer_class = CommentSerializer

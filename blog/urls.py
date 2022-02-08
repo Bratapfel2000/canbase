@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView, AddCommentView
-from .views import RestPostList, RestPostDetail
+#from .views import RestPostList, RestPostDetail
 
 urlpatterns = [
     #path('', views.home, name='blog-home'),
@@ -16,6 +16,6 @@ urlpatterns = [
     path('contact/', views.contact, name='blog-contact'),
     path('sitemap/', views.sitemap, name='blog-sitemap'),
 
-    path('<int:pk>/', RestPostDetail.as_view()),
-    path('', RestPostList.as_view()),
+ #   path('<int:pk>/', RestPostDetail.as_view()),
+ #   path('', RestPostList.as_view()),
 ]

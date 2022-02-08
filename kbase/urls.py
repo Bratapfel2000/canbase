@@ -26,7 +26,7 @@ urlpatterns = [
     path('bratapfel2000/', include('bratapfel2000.urls')),
     path('sondermuenz/', include('sondermuenz.urls')),
     path('', include('blog.urls')), #makes site to home
-    path('api/v1/', include('posts.urls'), name='rest1') # REST API
+    path('api/v1/', include('posts.urls')) # REST API
 
 
     path('register/', user_views.register, name='register'), #leads to user views, which return html

@@ -4,6 +4,6 @@ from blog.models import Post
 from .serializers import PostSerializer
 
 
-class BookAPIView(generics.ListAPIView):
+class PostAPIView(generics.ListAPIView):
 	queryset = Post.objects.all()
 	serializer_class = PostSerializer

@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView, AddCommentView
 
@@ -14,4 +14,5 @@ urlpatterns = [
     path('about/', views.about, name='blog-about'),
     path('contact/', views.contact, name='blog-contact'),
     path('sitemap/', views.sitemap, name='blog-sitemap'),
+    path('api/', include('api.urls')),
 ]

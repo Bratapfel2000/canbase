@@ -14,5 +14,5 @@ urlpatterns = [
     path('about/', views.about, name='blog-about'),
     path('contact/', views.contact, name='blog-contact'),
     path('sitemap/', views.sitemap, name='blog-sitemap'),
-    path('api/', include('api.urls')),
+    path('api/', include('api.urls'), name='post-api'),
 ]
